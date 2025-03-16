@@ -796,7 +796,7 @@ public final class TermuxService extends Service implements AppShell.AppShellCli
         }
 
         final boolean wakeLockHeld = mWakeLock != null;
-        if (wakeLockHeld) notificationText += " (wake lock held)";
+        if (wakeLockHeld) notificationText += " (唤醒锁持有)";
 
 
         // Set notification priority
