@@ -350,15 +350,15 @@ public final class TerminalSession extends TerminalOutput {
                 int exitCode = (Integer) msg.obj;
                 cleanupResources(exitCode);
 
-                String exitDescription = "\r\n[Process completed";
+                String exitDescription = "\r\n[进程完成";
                 if (exitCode > 0) {
                     // Non-zero process exit.
-                    exitDescription += " (code " + exitCode + ")";
+                    exitDescription += " (代码 " + exitCode + ")";
                 } else if (exitCode < 0) {
                     // Negated signal.
-                    exitDescription += " (signal " + (-exitCode) + ")";
+                    exitDescription += " (信号 " + (-exitCode) + ")";
                 }
-                exitDescription += " - press Enter]";
+                exitDescription += " - 按回车]";
 
                 byte[] bytesToWrite = exitDescription.getBytes(StandardCharsets.UTF_8);
                 mEmulator.append(bytesToWrite, bytesToWrite.length);
